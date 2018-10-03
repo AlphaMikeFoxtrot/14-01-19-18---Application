@@ -36,10 +36,6 @@ export default class HomeScreen extends Component {
         this.handleBackButtonClick = this.handleBackButtonClick.bind(this)
         this.logout = this.logout.bind(this)
         this.gallery = this.gallery.bind(this)
-    }
-
-    gallery() {
-        this.props.navigation.navigate("GalleryScreen")
     }    
 
     componentWillMount = async() => {
@@ -59,6 +55,11 @@ export default class HomeScreen extends Component {
     handleBackButtonClick() {
         BackHandler.exitApp()
         return true;
+    }
+
+    gallery() {
+        console.log(`gallery()----> rerouting to Gallery Screen....`)
+        this.props.navigation.navigate("GalleryScreen")
     }
 
     logout = async() => {

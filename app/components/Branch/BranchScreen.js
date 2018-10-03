@@ -6,7 +6,8 @@ import {
     Image,
     TouchableOpacity,
     AsyncStorage,
-    BackHandler
+    BackHandler,
+    FlatList
 } from 'react-native';
 import {
     Spinner,
