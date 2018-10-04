@@ -62,6 +62,11 @@ export default class HomeScreen extends Component {
         this.props.navigation.navigate("GalleryScreen")
     }
 
+    exam() {
+        console.log(`exam()----> rerouting to Exam Screen`)
+        this.props.navigation.navigate("ExamScreen")
+    }
+
     logout = async() => {
         console.log(`logout()----> removing data from AsyncStorage....`)
         this.setState({

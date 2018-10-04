@@ -13,7 +13,7 @@ import {
 } from 'native-base'
 import CONSTANTS from '../../constants/Constants'
 
-import ListCardItem from './ListCardItem'
+import ListCardItem from '../ListCardItem/ListCardItem'
 
 class GalleryScreen extends Component {
 
