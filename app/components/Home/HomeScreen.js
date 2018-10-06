@@ -36,6 +36,8 @@ export default class HomeScreen extends Component {
         this.handleBackButtonClick = this.handleBackButtonClick.bind(this)
         this.logout = this.logout.bind(this)
         this.gallery = this.gallery.bind(this)
+        this.exam = this.exam.bind(this);
+        this.event = this.event.bind(this)
     }    
 
     componentWillMount = async() => {
@@ -65,6 +67,11 @@ export default class HomeScreen extends Component {
     exam() {
         console.log(`exam()----> rerouting to Exam Screen`)
         this.props.navigation.navigate("ExamScreen")
+    }
+
+    event() {
+        console.log(`event()----> rerouting to Event Screen`)
+        this.props.navigation.navigate("EventScreen")
     }
 
     logout = async() => {
@@ -120,13 +127,13 @@ export default class HomeScreen extends Component {
                         </Col>
                         <Col style={styles.col}>
                             <Row style={styles.row}>
-                                <TouchableOpacity style={styles.card}>
+                                <TouchableOpacity style={styles.card} onPress={() => this.event()}>
                                     <Image source={require("../../assets/icons/_events.png")} style={styles.icons} resizeMode="contain" />
                                     <Text style={styles.iconLabel}>Events</Text>
                                 </TouchableOpacity>
                             </Row>
                             <Row style={styles.row}>
-                                <TouchableOpacity style={styles.card}>
+                                <TouchableOpacity style={styles.card} onPress={() => this.exam()}>
                                     <Image source={require("../../assets/icons/_exams.png")} style={styles.icons} resizeMode="contain" />
                                     <Text style={styles.iconLabel}>Exams</Text>
                                 </TouchableOpacity>

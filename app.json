@@ -24,7 +24,8 @@
       "supportsTablet": true
     },
     "androidStatusBar": {
-      "backgroundColor": "#1B5E20"
+      "backgroundColor": "#1b5e20",
+      "barStyle": "light-content"
     },
     "android": {
       "package": "com.smemetrics.nasr"

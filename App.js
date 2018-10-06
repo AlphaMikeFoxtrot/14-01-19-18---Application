@@ -9,6 +9,7 @@ import HomeScreen from './app/components/Home/HomeScreen'
 import BranchScreen from './app/components/Branch/BranchScreen'
 import GalleryScreen from './app/components/Gallery/GalleryScreen'
 import ExamScreen from './app/components/Exam/ExamScreen'
+import EventScreen from './app/components/Event/EventScreen'
 
 const App = createStackNavigator({
   LoginScreen: {
@@ -25,6 +26,9 @@ const App = createStackNavigator({
   },
   ExamScreen: {
     screen: ExamScreen
+  },
+  EventScreen: {
+    screen: EventScreen
   }
 })
 

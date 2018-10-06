@@ -13,7 +13,7 @@ import {
 } from 'native-base'
 import CONSTANTS from '../../constants/Constants'
 
-import ListCardItem from '../ListCardItem/ListCardItem'
+import ListCardItemGallery from '../ListCardItem/ListCardItemGallery'
 
 class GalleryScreen extends Component {
 
@@ -38,7 +38,6 @@ class GalleryScreen extends Component {
         this.getUserData()
     }
     
-
     componentWillMount = () => {
         BackHandler.addEventListener("hardwareBackPress", this.handleBackButtonClick);
     }
@@ -122,7 +121,7 @@ class GalleryScreen extends Component {
         if(this.state.error) {
             return (
                 <View style={styles.generalContainer}>
-                    <Text>{this.state.errorMessage}</Text>
+                    <Text>{this.state.errorMessage.toString()}</Text>
                 </View>
             )
         }
@@ -133,7 +132,7 @@ class GalleryScreen extends Component {
                     data={this.state.data}
                     keyExtractor={item => item._id}
                     renderItem={({item}) => (
-                        <ListCardItem imageUrl={item.imageUrl} title={item.caption} description={item.description}/>
+                        <ListCardItemGallery imageUrl={item.imageUrl} title={item.caption} description={item.description}/>
                     )}
                 />
             </View>

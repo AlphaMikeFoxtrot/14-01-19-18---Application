@@ -15,7 +15,7 @@ import {
     Right
 } from 'native-base';
 
-export default class ListCardItem extends Component {
+export default class ListCardItemGallery extends Component {
     constructor(props) {
         super(props);
         this.state = {
