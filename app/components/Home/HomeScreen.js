@@ -38,6 +38,7 @@ export default class HomeScreen extends Component {
         this.gallery = this.gallery.bind(this)
         this.exam = this.exam.bind(this);
         this.event = this.event.bind(this)
+        this.notifications = this.notifications.bind(this)
     }    
 
     componentWillMount = async() => {
@@ -62,6 +63,11 @@ export default class HomeScreen extends Component {
     gallery() {
         console.log(`gallery()----> rerouting to Gallery Screen....`)
         this.props.navigation.navigate("GalleryScreen")
+    }
+
+    notifications() {
+        console.log(`notifications()----> rerouting to Notification Screen....`)
+        this.props.navigation.navigate("NotificationScreen")
     }
 
     exam() {
@@ -119,7 +125,7 @@ export default class HomeScreen extends Component {
                                 </TouchableOpacity>
                             </Row>
                             <Row style={styles.row}>
-                                <TouchableOpacity style={styles.card}>
+                                <TouchableOpacity style={styles.card} onPress={() => this.notifications()}>
                                     <Image source={require("../../assets/icons/_notification.png")} style={styles.icons} resizeMode="contain" />
                                     <Text style={styles.iconLabel}>Notifications</Text>
                                 </TouchableOpacity>
