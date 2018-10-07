@@ -29,7 +29,6 @@ export default class ListCardItemExam extends Component {
             downloaded: false,
             isLoading: false
         };
-        this.downloadImage = this.downloadImage.bind(this)
         this.saveImage = this.saveImage.bind(this)
     }
 
@@ -81,8 +80,8 @@ export default class ListCardItemExam extends Component {
                         <Left>
                             <Text style={styles.title}>{this.props.title}</Text>
                         </Left>
-                        <Right style={{height: "100%"}}>
-                            <Spinner />
+                        <Right>
+                            <Image resizeMode="contain" source={require("../../assets/gif/bubbles.gif")} style={styles.gif} />
                         </Right>
                     </CardItem>
                     <CardItem>
@@ -158,5 +157,9 @@ const styles = StyleSheet.create({
     spinnerContainer: {
         height: 24, 
         width: 24
+    },
+    gif: {
+        height: 36, 
+        width: 36
     }
 })

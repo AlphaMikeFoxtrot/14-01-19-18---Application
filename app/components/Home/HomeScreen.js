@@ -106,12 +106,15 @@ export default class HomeScreen extends Component {
         if(this.state.isLoading) {
             return (
                 <View style={styles.generalContainer}>
-                    <Spinner />
+                    <Image resizeMode="contain" source={require("../../assets/gif/bubbles.gif")} style={styles.gif} />
                 </View>
             )
         }
         return (
             <View style={styles.container}>
+                <View style={styles.header}>
+                    
+                </View>
                 <View style={styles.topContainer}>
                     <Image source={require("../../assets/logo/logo.png")} resizeMode="contain" style={styles.logo}/>
                 </View>
@@ -164,8 +167,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: '#fff'
     },
+    header: {
+        height: "5%", 
+        backgroundColor: "#fff", 
+        alignItems: 'flex-end',
+        justifyContent: 'center',
+    },
     topContainer: {
-        height: "40%", 
+        height: "35%", 
         backgroundColor: "#fff",
         alignItems: "center", 
         justifyContent: 'center',
@@ -214,5 +223,9 @@ const styles = StyleSheet.create({
         textAlign: "center", 
         fontWeight: 'bold',
         margin: 4, 
+    },
+    gif: {
+        height: "20%",
+        width: "20%"
     }
 })

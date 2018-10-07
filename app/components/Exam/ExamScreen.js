@@ -6,6 +6,7 @@ import {
     BackHandler, 
     AsyncStorage, 
     FlatList, 
+    Image
 } from 'react-native';
 import {
     SearchBar
@@ -133,7 +134,7 @@ export default class ExamScreen extends Component {
         if(this.state.isLoading) {
             return (
                 <View style={styles.generalContainer}>
-                    <Spinner />
+                    <Image resizeMode="contain" source={require("../../assets/gif/bubbles.gif")} style={styles.gif} />
                 </View>
             )
         }
@@ -170,5 +171,9 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: 'center',
         backgroundColor: '#fff'
+    },
+    gif: {
+        height: "20%",
+        width: "20%"
     }
 });

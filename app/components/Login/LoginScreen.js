@@ -240,7 +240,7 @@ export default class LoginScreen extends Component {
         if(this.state.isLoading) {
             return(
                 <View style={styles.generalContainer}>
-                    <Spinner />
+                    <Image resizeMode="contain" source={require("../../assets/gif/bubbles.gif")} style={styles.gif} />
                 </View>
             )
         }
@@ -442,5 +442,9 @@ const styles = StyleSheet.create({
         fontSize: 22,
         color: "#222",
         alignSelf: "center"
+    },
+    gif: {
+        height: "20%", 
+        width: "20%"
     }
 })

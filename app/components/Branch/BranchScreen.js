@@ -7,7 +7,7 @@ import {
     TouchableOpacity,
     AsyncStorage,
     BackHandler,
-    FlatList
+    FlatList, 
 } from 'react-native';
 import {
     Spinner,
@@ -166,7 +166,7 @@ export default class BranchScreen extends Component {
         if(this.state.isLoading) {
             return (
                 <View style={styles.generalContainer}>
-                    <Spinner />
+                    <Image resizeMode="contain" source={require("../../assets/gif/bubbles.gif")} style={styles.gif} />
                 </View>
             )
         }
@@ -271,5 +271,9 @@ const styles = StyleSheet.create({
         fontSize: 20, 
         color: '#000',
         marginBottom: 12
+    },
+    gif: {
+        height: "20%",
+        width: "20%"
     }
 })

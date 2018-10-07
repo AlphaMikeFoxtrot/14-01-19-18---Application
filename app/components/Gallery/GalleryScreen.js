@@ -6,7 +6,8 @@ import {
     FlatList,
     BackHandler,
     AsyncStorage,
-    StyleSheet
+    StyleSheet,
+    Image
 } from 'react-native';
 import {
     Spinner 
@@ -15,7 +16,7 @@ import CONSTANTS from '../../constants/Constants'
 
 import ListCardItemGallery from '../ListCardItem/ListCardItemGallery'
 
-class GalleryScreen extends Component {
+export default class GalleryScreen extends Component {
 
     static navigationOptions = {
         header: null
@@ -113,7 +114,7 @@ class GalleryScreen extends Component {
         if(this.state.isLoading) {
             return (
                 <View style={styles.generalContainer}>
-                    <Spinner />
+                    <Image resizeMode="contain" source={require("../../assets/gif/bubbles.gif")} style={styles.gif} />
                 </View>
             )
         }
@@ -149,7 +150,11 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
+    },
+    gif: {
+        height: "20%",
+        width: "20%"
     }
 })
 
-export default GalleryScreen;
+
